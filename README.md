@@ -20,4 +20,3 @@
 1. go to /admin
 2. login with superuser
 3. 
-
