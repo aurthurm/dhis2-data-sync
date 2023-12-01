@@ -1,0 +1,41 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> 
+			{% block title %}Home{% endblock %} - Carpha
+		</title>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=yes"/>
+		<meta charset="utf-8">
+		<link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+		<script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+		<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+		<link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+		<link href="{% static 'css/style.css' %}" rel='stylesheet' type='text/css' />
+		{% block head_style %}{% endblock %}
+		{% block head_script %}{% endblock %}
+	</head>
+	<body class="font-family-karla h-screen">
+		{% block navigation %}
+			{% include "navigation.html" %}
+		{% endblock %}
+
+		{% block main_content %}{% endblock %}
+
+		{% block footer %}
+		{% endblock %}		
+
+		{% block footer_script %}
+		{% endblock %}
+	</body>
+</html>
+
+
+
+
+
