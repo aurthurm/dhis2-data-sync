@@ -1,12 +1,31 @@
+import pandas as pd
+import numpy as np
 from django.shortcuts import render
 from django.http import JsonResponse
 from django.conf import settings
+from django.contrib.auth.decorators import login_required
 from .resource import DHISAPI
 from .models import (
     OrganisatinalUnit, DataSet, DataElement, OptionSet, OptionSetOption
 )
 
 
+def str_value(v):
+    rv = ""
+    if isinstance(v, str):
+        rv = v
+    elif isinstance(v, int) or isinstance(v, float):
+        rv = str(v)
+    elif v in ["", None, np.nan] or not v:
+        rv = ""
+    else:
+        rv = v
+    if rv == 'nan':
+        return ""
+    return rv
+
+
+@login_required
 def home(request):
     return render(request,'scrapper/home.html', context={})
 
@@ -131,29 +150,7 @@ def update_data_value_sets(request):
             },
         ]
     }   
-    example_cmb = {
-        "dataSet": "SvvPZlVq8f7",
-        "completeDate": "2023-11-11",
-        "period": "2023",
-        "orgUnit": "y1RAopexuHW",
-        "attributeOptionCombo": "",
-        "dataValues": [
-            { 
-                "dataElement": "sQtdMWFElAa",
-                "categoryOptionCombo": "",
-                "optionSet": "oVwTt4sIpbB",
-                "value": "FeQvajMbY1L",
-                "comment": "updated via API"
-            },
-            {
-                "dataElement": "ySklKcMVkRc",
-                "categoryOptionCombo": "",
-                "value": "Yay finally got uh",
-                "comment": "updated via API"
-            },
-        ]
-    }
-    pay_1 = api.send(url, data=example_cmb)
+    pay_1 = api.send(url, data=works_values)
     
     # send large bulks of data values which don't necessarily are logically related.
     # example = {
@@ -173,8 +170,36 @@ def update_data_value_sets(request):
     #     ]
     # }
     
-    # pay_1 = api.send(url, data=example)
-    
     return JsonResponse({
         "data": pay_1
+    })
+    
+    
+def upload_file(request):
+    payload = None
+    if request.method == "POST":
+        file = request.FILES['file']
+        df = pd.read_csv(file)
+        
+        api = DHISAPI()
+        url = api.make_url(settings.DATA_VALUE_SETS, dryRun="false", importStrategy="CREATE_AND_UPDATE", force="false")
+        
+        datums = {
+            "dataValues": [
+                {
+                "dataSet": str_value(row["DataSet"]),
+                "completeDate": str_value(row["CompleteDate"]),
+                "dataElement": str_value(row["DataElement"]),
+                "period": str_value(row["Period"]),
+                "orgUnit": str_value(row["OrgUnit"]),
+                "value": str_value(row["Value"]),
+                "comment": str_value(row["Comment"])
+                }  for _, row in df.iterrows()
+            ]
+        }
+        print(datums)
+        payload = api.send(url, data=datums)
+        
+    return JsonResponse({
+        "data": payload
     })
