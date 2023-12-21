@@ -197,7 +197,6 @@ def upload_file(request):
                 }  for _, row in df.iterrows()
             ]
         }
-        print(datums)
         payload = api.send(url, data=datums)
         
     return JsonResponse({
