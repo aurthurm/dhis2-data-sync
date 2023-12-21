@@ -28,8 +28,13 @@ SECRET_KEY = "django-insecure-dl^m5_c%(b@0zwjj*07rwz)tsf*=g+s_w^i=$i+lavb$#29d^q
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = [
+    "localhost",
+    "127.0.0.1",
+    "192.168.0.40",
+    "196.27.127.58",
+    "mhealth.nmrl.org.zw",
+]
 
 # Application definition
 
