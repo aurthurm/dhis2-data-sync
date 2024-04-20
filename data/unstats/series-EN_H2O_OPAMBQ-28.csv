@@ -1,0 +1,2 @@
+Goal,Target,Indicator,SeriesCode,SeriesDescription,GeoAreaCode,GeoAreaName,TimePeriod,Value,Time_Detail,TimeCoverage,UpperBound,LowerBound,BasePeriod,Source,GeoInfoUrl,FootNote,[Nature],[Observation Status],[Reporting Type],[Units]
+"6","6.3","6.3.2","EN_H2O_OPAMBQ","Proportion of open water bodies with good ambient water quality (%)","28","Antigua and Barbuda","2020","0","2017-2019","","","","","Department of Environment","","","C","A","G","PERCENT"

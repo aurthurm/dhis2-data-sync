@@ -21,7 +21,9 @@ admin.site.register(DataSet, DataSetAdmin)
 
 class DataElementAdmin(admin.ModelAdmin):
     list_display = ['dhis_id', 'name', 'dataset']
-    search_fields = ['dhis_id', 'name']
+    search_fields = ['dhis_id', 'name', "dataset__dhis_id", "dataset__name"]
+    def regroup_by(self):
+        return 'dataset__name'
 admin.site.register(DataElement, DataElementAdmin)
 
 class DataImportAdmin(admin.ModelAdmin):

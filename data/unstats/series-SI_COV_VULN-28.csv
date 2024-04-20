@@ -1,0 +1,2 @@
+Goal,Target,Indicator,SeriesCode,SeriesDescription,GeoAreaCode,GeoAreaName,TimePeriod,Value,Time_Detail,TimeCoverage,UpperBound,LowerBound,BasePeriod,Source,GeoInfoUrl,FootNote,[Nature],[Observation Status],[Reporting Type],[Sex],[Units]
+"1","1.3","1.3.1","SI_COV_VULN","[ILO] Proportion of vulnerable population receiving social assistance cash benefit, by sex (%)","28","Antigua and Barbuda","2020","3.9","2020","","","","","ILO estimates based on country data compled through the ILO Social Security Inquiry (SSI)","","","E","A","G","BOTHSEX","PERCENT"

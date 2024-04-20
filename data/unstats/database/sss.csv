@@ -1,0 +1,316 @@
+,Goal,Target,Indicator,SeriesCode,SeriesDescription,GeoAreaCode,GeoAreaName,TimePeriod,Value,Sex,Reporting Type,Observation Status,Units,Age,Nature
+0,2,2.1,2.1.1,SN_ITK_DEFC,Prevalence of undernourishment (%),52,Barbados,2020,<2.5,,G,E,PERCENT,,E
+1,2,2.1,2.1.1,SN_ITK_DEFC,Prevalence of undernourishment (%),52,Barbados,2021,<2.5,,G,E,PERCENT,,E
+2,2,2.1,2.1.1,SN_ITK_DEFC,Prevalence of undernourishment (%),52,Barbados,2022,,,G,O,PERCENT,,
+3,2,2.1,2.1.1,SN_ITK_DEFC,Prevalence of undernourishment (%),388,Jamaica,2020,7.5,,G,E,PERCENT,,E
+4,2,2.1,2.1.1,SN_ITK_DEFC,Prevalence of undernourishment (%),388,Jamaica,2021,8.3,,G,E,PERCENT,,E
+5,2,2.1,2.1.1,SN_ITK_DEFC,Prevalence of undernourishment (%),388,Jamaica,2022,,,G,O,PERCENT,,
+6,2,2.1,2.1.1,SN_ITK_DEFC,Prevalence of undernourishment (%),780,Trinidad and Tobago,2020,13.4,,G,E,PERCENT,,E
+7,2,2.1,2.1.1,SN_ITK_DEFC,Prevalence of undernourishment (%),780,Trinidad and Tobago,2021,12.2,,G,E,PERCENT,,E
+8,2,2.1,2.1.1,SN_ITK_DEFC,Prevalence of undernourishment (%),780,Trinidad and Tobago,2022,,,G,O,PERCENT,,
+9,2,2.1,2.1.1,SN_ITK_DEFCN,Number of undernourished people (millions),52,Barbados,2020,,,G,Q,NUM_M,,
+10,2,2.1,2.1.1,SN_ITK_DEFCN,Number of undernourished people (millions),52,Barbados,2021,,,G,Q,NUM_M,,
+11,2,2.1,2.1.1,SN_ITK_DEFCN,Number of undernourished people (millions),52,Barbados,2022,,,G,O,NUM_M,,
+12,2,2.1,2.1.1,SN_ITK_DEFCN,Number of undernourished people (millions),388,Jamaica,2020,0.2,,G,E,NUM_M,,E
+13,2,2.1,2.1.1,SN_ITK_DEFCN,Number of undernourished people (millions),388,Jamaica,2021,0.2,,G,E,NUM_M,,E
+14,2,2.1,2.1.1,SN_ITK_DEFCN,Number of undernourished people (millions),388,Jamaica,2022,,,G,O,NUM_M,,
+15,2,2.1,2.1.1,SN_ITK_DEFCN,Number of undernourished people (millions),780,Trinidad and Tobago,2020,0.2,,G,E,NUM_M,,E
+16,2,2.1,2.1.1,SN_ITK_DEFCN,Number of undernourished people (millions),780,Trinidad and Tobago,2021,0.2,,G,E,NUM_M,,E
+17,2,2.1,2.1.1,SN_ITK_DEFCN,Number of undernourished people (millions),780,Trinidad and Tobago,2022,,,G,O,NUM_M,,
+18,2,2.1,2.1.2,AG_PRD_FIESMS,Prevalence of moderate or severe food insecurity (%),44,Bahamas,2020,16.9,FEMALE,G,A,PERCENT,15+,G
+19,2,2.1,2.1.2,AG_PRD_FIESMS,Prevalence of moderate or severe food insecurity (%),44,Bahamas,2020,17.2,BOTHSEX,G,A,PERCENT,ALLAGE,G
+20,2,2.1,2.1.2,AG_PRD_FIESMS,Prevalence of moderate or severe food insecurity (%),44,Bahamas,2020,17.6,MALE,G,A,PERCENT,15+,G
+21,2,2.1,2.1.2,AG_PRD_FIESMS,Prevalence of moderate or severe food insecurity (%),44,Bahamas,2021,16.9,FEMALE,G,A,PERCENT,15+,G
+22,2,2.1,2.1.2,AG_PRD_FIESMS,Prevalence of moderate or severe food insecurity (%),44,Bahamas,2021,17.6,MALE,G,A,PERCENT,15+,G
+23,2,2.1,2.1.2,AG_PRD_FIESMS,Prevalence of moderate or severe food insecurity (%),44,Bahamas,2021,17.2,BOTHSEX,G,A,PERCENT,ALLAGE,G
+24,2,2.1,2.1.2,AG_PRD_FIESMS,Prevalence of moderate or severe food insecurity (%),44,Bahamas,2022,,FEMALE,G,O,PERCENT,15+,
+25,2,2.1,2.1.2,AG_PRD_FIESMS,Prevalence of moderate or severe food insecurity (%),44,Bahamas,2022,,BOTHSEX,G,O,PERCENT,ALLAGE,
+26,2,2.1,2.1.2,AG_PRD_FIESMS,Prevalence of moderate or severe food insecurity (%),44,Bahamas,2022,,MALE,G,O,PERCENT,15+,
+27,2,2.1,2.1.2,AG_PRD_FIESMS,Prevalence of moderate or severe food insecurity (%),52,Barbados,2020,28.8,MALE,G,A,PERCENT,15+,G
+28,2,2.1,2.1.2,AG_PRD_FIESMS,Prevalence of moderate or severe food insecurity (%),52,Barbados,2020,31.1,BOTHSEX,G,A,PERCENT,ALLAGE,G
+29,2,2.1,2.1.2,AG_PRD_FIESMS,Prevalence of moderate or severe food insecurity (%),52,Barbados,2020,33.3,FEMALE,G,A,PERCENT,15+,G
+30,2,2.1,2.1.2,AG_PRD_FIESMS,Prevalence of moderate or severe food insecurity (%),52,Barbados,2021,31.1,BOTHSEX,G,A,PERCENT,ALLAGE,G
+31,2,2.1,2.1.2,AG_PRD_FIESMS,Prevalence of moderate or severe food insecurity (%),52,Barbados,2021,33.3,FEMALE,G,A,PERCENT,15+,G
+32,2,2.1,2.1.2,AG_PRD_FIESMS,Prevalence of moderate or severe food insecurity (%),52,Barbados,2021,28.8,MALE,G,A,PERCENT,15+,G
+33,2,2.1,2.1.2,AG_PRD_FIESMS,Prevalence of moderate or severe food insecurity (%),52,Barbados,2022,,FEMALE,G,O,PERCENT,15+,
+34,2,2.1,2.1.2,AG_PRD_FIESMS,Prevalence of moderate or severe food insecurity (%),52,Barbados,2022,,MALE,G,O,PERCENT,15+,
+35,2,2.1,2.1.2,AG_PRD_FIESMS,Prevalence of moderate or severe food insecurity (%),52,Barbados,2022,,BOTHSEX,G,O,PERCENT,ALLAGE,
+36,2,2.1,2.1.2,AG_PRD_FIESMS,Prevalence of moderate or severe food insecurity (%),388,Jamaica,2020,45.4,MALE,G,A,PERCENT,15+,G
+37,2,2.1,2.1.2,AG_PRD_FIESMS,Prevalence of moderate or severe food insecurity (%),388,Jamaica,2020,55.2,FEMALE,G,A,PERCENT,15+,G
+38,2,2.1,2.1.2,AG_PRD_FIESMS,Prevalence of moderate or severe food insecurity (%),388,Jamaica,2020,50.3,BOTHSEX,G,A,PERCENT,ALLAGE,G
+39,2,2.1,2.1.2,AG_PRD_FIESMS,Prevalence of moderate or severe food insecurity (%),388,Jamaica,2021,54.4,BOTHSEX,G,A,PERCENT,ALLAGE,G
+40,2,2.1,2.1.2,AG_PRD_FIESMS,Prevalence of moderate or severe food insecurity (%),388,Jamaica,2021,56.3,FEMALE,G,A,PERCENT,15+,G
+41,2,2.1,2.1.2,AG_PRD_FIESMS,Prevalence of moderate or severe food insecurity (%),388,Jamaica,2021,52.4,MALE,G,A,PERCENT,15+,G
+42,2,2.1,2.1.2,AG_PRD_FIESMS,Prevalence of moderate or severe food insecurity (%),388,Jamaica,2022,,MALE,G,O,PERCENT,15+,
+43,2,2.1,2.1.2,AG_PRD_FIESMS,Prevalence of moderate or severe food insecurity (%),388,Jamaica,2022,,FEMALE,G,O,PERCENT,15+,
+44,2,2.1,2.1.2,AG_PRD_FIESMS,Prevalence of moderate or severe food insecurity (%),388,Jamaica,2022,,BOTHSEX,G,O,PERCENT,ALLAGE,
+45,2,2.1,2.1.2,AG_PRD_FIESMS,Prevalence of moderate or severe food insecurity (%),780,Trinidad and Tobago,2020,41.9,MALE,G,A,PERCENT,15+,G
+46,2,2.1,2.1.2,AG_PRD_FIESMS,Prevalence of moderate or severe food insecurity (%),780,Trinidad and Tobago,2020,44.8,FEMALE,G,A,PERCENT,15+,G
+47,2,2.1,2.1.2,AG_PRD_FIESMS,Prevalence of moderate or severe food insecurity (%),780,Trinidad and Tobago,2020,43.3,BOTHSEX,G,A,PERCENT,ALLAGE,G
+48,2,2.1,2.1.2,AG_PRD_FIESMS,Prevalence of moderate or severe food insecurity (%),780,Trinidad and Tobago,2021,43.3,BOTHSEX,G,A,PERCENT,ALLAGE,G
+49,2,2.1,2.1.2,AG_PRD_FIESMS,Prevalence of moderate or severe food insecurity (%),780,Trinidad and Tobago,2021,41.9,MALE,G,A,PERCENT,15+,G
+50,2,2.1,2.1.2,AG_PRD_FIESMS,Prevalence of moderate or severe food insecurity (%),780,Trinidad and Tobago,2021,44.8,FEMALE,G,A,PERCENT,15+,G
+51,2,2.1,2.1.2,AG_PRD_FIESMS,Prevalence of moderate or severe food insecurity (%),780,Trinidad and Tobago,2022,,FEMALE,G,O,PERCENT,15+,
+52,2,2.1,2.1.2,AG_PRD_FIESMS,Prevalence of moderate or severe food insecurity (%),780,Trinidad and Tobago,2022,,MALE,G,O,PERCENT,15+,
+53,2,2.1,2.1.2,AG_PRD_FIESMS,Prevalence of moderate or severe food insecurity (%),780,Trinidad and Tobago,2022,,BOTHSEX,G,O,PERCENT,ALLAGE,
+54,2,2.1,2.1.2,AG_PRD_FIESMSN,Number of moderately or severely food insecure people (thousands of people),44,Bahamas,2020,<100,BOTHSEX,G,A,NUM_TH,ALLAGE,G
+55,2,2.1,2.1.2,AG_PRD_FIESMSN,Number of moderately or severely food insecure people (thousands of people),44,Bahamas,2020,<100,MALE,G,A,NUM_TH,15+,G
+56,2,2.1,2.1.2,AG_PRD_FIESMSN,Number of moderately or severely food insecure people (thousands of people),44,Bahamas,2020,<100,FEMALE,G,A,NUM_TH,15+,G
+57,2,2.1,2.1.2,AG_PRD_FIESMSN,Number of moderately or severely food insecure people (thousands of people),44,Bahamas,2021,<100,MALE,G,A,NUM_TH,15+,G
+58,2,2.1,2.1.2,AG_PRD_FIESMSN,Number of moderately or severely food insecure people (thousands of people),44,Bahamas,2021,<100,FEMALE,G,A,NUM_TH,15+,G
+59,2,2.1,2.1.2,AG_PRD_FIESMSN,Number of moderately or severely food insecure people (thousands of people),44,Bahamas,2021,<100,BOTHSEX,G,A,NUM_TH,ALLAGE,G
+60,2,2.1,2.1.2,AG_PRD_FIESMSN,Number of moderately or severely food insecure people (thousands of people),44,Bahamas,2022,,FEMALE,G,O,NUM_TH,15+,
+61,2,2.1,2.1.2,AG_PRD_FIESMSN,Number of moderately or severely food insecure people (thousands of people),44,Bahamas,2022,,BOTHSEX,G,O,NUM_TH,ALLAGE,
+62,2,2.1,2.1.2,AG_PRD_FIESMSN,Number of moderately or severely food insecure people (thousands of people),44,Bahamas,2022,,MALE,G,O,NUM_TH,15+,
+63,2,2.1,2.1.2,AG_PRD_FIESMSN,Number of moderately or severely food insecure people (thousands of people),52,Barbados,2020,<100,BOTHSEX,G,A,NUM_TH,ALLAGE,G
+64,2,2.1,2.1.2,AG_PRD_FIESMSN,Number of moderately or severely food insecure people (thousands of people),52,Barbados,2020,<100,FEMALE,G,A,NUM_TH,15+,G
+65,2,2.1,2.1.2,AG_PRD_FIESMSN,Number of moderately or severely food insecure people (thousands of people),52,Barbados,2020,<100,MALE,G,A,NUM_TH,15+,G
+66,2,2.1,2.1.2,AG_PRD_FIESMSN,Number of moderately or severely food insecure people (thousands of people),52,Barbados,2021,<100,MALE,G,A,NUM_TH,15+,G
+67,2,2.1,2.1.2,AG_PRD_FIESMSN,Number of moderately or severely food insecure people (thousands of people),52,Barbados,2021,<100,BOTHSEX,G,A,NUM_TH,ALLAGE,G
+68,2,2.1,2.1.2,AG_PRD_FIESMSN,Number of moderately or severely food insecure people (thousands of people),52,Barbados,2021,<100,FEMALE,G,A,NUM_TH,15+,G
+69,2,2.1,2.1.2,AG_PRD_FIESMSN,Number of moderately or severely food insecure people (thousands of people),52,Barbados,2022,,FEMALE,G,O,NUM_TH,15+,
+70,2,2.1,2.1.2,AG_PRD_FIESMSN,Number of moderately or severely food insecure people (thousands of people),52,Barbados,2022,,BOTHSEX,G,O,NUM_TH,ALLAGE,
+71,2,2.1,2.1.2,AG_PRD_FIESMSN,Number of moderately or severely food insecure people (thousands of people),52,Barbados,2022,,MALE,G,O,NUM_TH,15+,
+72,2,2.1,2.1.2,AG_PRD_FIESMSN,Number of moderately or severely food insecure people (thousands of people),388,Jamaica,2020,499.2,MALE,G,A,NUM_TH,15+,G
+73,2,2.1,2.1.2,AG_PRD_FIESMSN,Number of moderately or severely food insecure people (thousands of people),388,Jamaica,2020,1417.6,BOTHSEX,G,A,NUM_TH,ALLAGE,G
+74,2,2.1,2.1.2,AG_PRD_FIESMSN,Number of moderately or severely food insecure people (thousands of people),388,Jamaica,2020,624.7,FEMALE,G,A,NUM_TH,15+,G
+75,2,2.1,2.1.2,AG_PRD_FIESMSN,Number of moderately or severely food insecure people (thousands of people),388,Jamaica,2021,581.6,MALE,G,A,NUM_TH,15+,G
+76,2,2.1,2.1.2,AG_PRD_FIESMSN,Number of moderately or severely food insecure people (thousands of people),388,Jamaica,2021,642.1,FEMALE,G,A,NUM_TH,15+,G
+77,2,2.1,2.1.2,AG_PRD_FIESMSN,Number of moderately or severely food insecure people (thousands of people),388,Jamaica,2021,1535.7,BOTHSEX,G,A,NUM_TH,ALLAGE,G
+78,2,2.1,2.1.2,AG_PRD_FIESMSN,Number of moderately or severely food insecure people (thousands of people),388,Jamaica,2022,,MALE,G,O,NUM_TH,15+,
+79,2,2.1,2.1.2,AG_PRD_FIESMSN,Number of moderately or severely food insecure people (thousands of people),388,Jamaica,2022,,FEMALE,G,O,NUM_TH,15+,
+80,2,2.1,2.1.2,AG_PRD_FIESMSN,Number of moderately or severely food insecure people (thousands of people),388,Jamaica,2022,,BOTHSEX,G,O,NUM_TH,ALLAGE,
+81,2,2.1,2.1.2,AG_PRD_FIESMSN,Number of moderately or severely food insecure people (thousands of people),780,Trinidad and Tobago,2020,279.7,FEMALE,G,A,NUM_TH,15+,G
+82,2,2.1,2.1.2,AG_PRD_FIESMSN,Number of moderately or severely food insecure people (thousands of people),780,Trinidad and Tobago,2020,250.2,MALE,G,A,NUM_TH,15+,G
+83,2,2.1,2.1.2,AG_PRD_FIESMSN,Number of moderately or severely food insecure people (thousands of people),780,Trinidad and Tobago,2020,658.9,BOTHSEX,G,A,NUM_TH,ALLAGE,G
+84,2,2.1,2.1.2,AG_PRD_FIESMSN,Number of moderately or severely food insecure people (thousands of people),780,Trinidad and Tobago,2021,251.1,MALE,G,A,NUM_TH,15+,G
+85,2,2.1,2.1.2,AG_PRD_FIESMSN,Number of moderately or severely food insecure people (thousands of people),780,Trinidad and Tobago,2021,660.5,BOTHSEX,G,A,NUM_TH,ALLAGE,G
+86,2,2.1,2.1.2,AG_PRD_FIESMSN,Number of moderately or severely food insecure people (thousands of people),780,Trinidad and Tobago,2021,281.7,FEMALE,G,A,NUM_TH,15+,G
+87,2,2.1,2.1.2,AG_PRD_FIESMSN,Number of moderately or severely food insecure people (thousands of people),780,Trinidad and Tobago,2022,,FEMALE,G,O,NUM_TH,15+,
+88,2,2.1,2.1.2,AG_PRD_FIESMSN,Number of moderately or severely food insecure people (thousands of people),780,Trinidad and Tobago,2022,,MALE,G,O,NUM_TH,15+,
+89,2,2.1,2.1.2,AG_PRD_FIESMSN,Number of moderately or severely food insecure people (thousands of people),780,Trinidad and Tobago,2022,,BOTHSEX,G,O,NUM_TH,ALLAGE,
+90,2,2.1,2.1.2,AG_PRD_FIESS,Prevalence of severe food insecurity (%),44,Bahamas,2020,3.6,MALE,G,A,PERCENT,15+,G
+91,2,2.1,2.1.2,AG_PRD_FIESS,Prevalence of severe food insecurity (%),44,Bahamas,2020,3.4,BOTHSEX,G,A,PERCENT,ALLAGE,G
+92,2,2.1,2.1.2,AG_PRD_FIESS,Prevalence of severe food insecurity (%),44,Bahamas,2020,3.3,FEMALE,G,A,PERCENT,15+,G
+93,2,2.1,2.1.2,AG_PRD_FIESS,Prevalence of severe food insecurity (%),44,Bahamas,2021,3.6,MALE,G,A,PERCENT,15+,G
+94,2,2.1,2.1.2,AG_PRD_FIESS,Prevalence of severe food insecurity (%),44,Bahamas,2021,3.3,FEMALE,G,A,PERCENT,15+,G
+95,2,2.1,2.1.2,AG_PRD_FIESS,Prevalence of severe food insecurity (%),44,Bahamas,2021,3.4,BOTHSEX,G,A,PERCENT,ALLAGE,G
+96,2,2.1,2.1.2,AG_PRD_FIESS,Prevalence of severe food insecurity (%),44,Bahamas,2022,,BOTHSEX,G,O,PERCENT,ALLAGE,
+97,2,2.1,2.1.2,AG_PRD_FIESS,Prevalence of severe food insecurity (%),44,Bahamas,2022,,FEMALE,G,O,PERCENT,15+,
+98,2,2.1,2.1.2,AG_PRD_FIESS,Prevalence of severe food insecurity (%),44,Bahamas,2022,,MALE,G,O,PERCENT,15+,
+99,2,2.1,2.1.2,AG_PRD_FIESS,Prevalence of severe food insecurity (%),52,Barbados,2020,6.8,MALE,G,A,PERCENT,15+,G
+100,2,2.1,2.1.2,AG_PRD_FIESS,Prevalence of severe food insecurity (%),52,Barbados,2020,8,FEMALE,G,A,PERCENT,15+,G
+101,2,2.1,2.1.2,AG_PRD_FIESS,Prevalence of severe food insecurity (%),52,Barbados,2020,7.4,BOTHSEX,G,A,PERCENT,ALLAGE,G
+102,2,2.1,2.1.2,AG_PRD_FIESS,Prevalence of severe food insecurity (%),52,Barbados,2021,7.4,BOTHSEX,G,A,PERCENT,ALLAGE,G
+103,2,2.1,2.1.2,AG_PRD_FIESS,Prevalence of severe food insecurity (%),52,Barbados,2021,8,FEMALE,G,A,PERCENT,15+,G
+104,2,2.1,2.1.2,AG_PRD_FIESS,Prevalence of severe food insecurity (%),52,Barbados,2021,6.8,MALE,G,A,PERCENT,15+,G
+105,2,2.1,2.1.2,AG_PRD_FIESS,Prevalence of severe food insecurity (%),52,Barbados,2022,,FEMALE,G,O,PERCENT,15+,
+106,2,2.1,2.1.2,AG_PRD_FIESS,Prevalence of severe food insecurity (%),52,Barbados,2022,,BOTHSEX,G,O,PERCENT,ALLAGE,
+107,2,2.1,2.1.2,AG_PRD_FIESS,Prevalence of severe food insecurity (%),52,Barbados,2022,,MALE,G,O,PERCENT,15+,
+108,2,2.1,2.1.2,AG_PRD_FIESS,Prevalence of severe food insecurity (%),388,Jamaica,2020,19.6,MALE,G,A,PERCENT,15+,G
+109,2,2.1,2.1.2,AG_PRD_FIESS,Prevalence of severe food insecurity (%),388,Jamaica,2020,23.1,BOTHSEX,G,A,PERCENT,ALLAGE,G
+110,2,2.1,2.1.2,AG_PRD_FIESS,Prevalence of severe food insecurity (%),388,Jamaica,2020,26.7,FEMALE,G,A,PERCENT,15+,G
+111,2,2.1,2.1.2,AG_PRD_FIESS,Prevalence of severe food insecurity (%),388,Jamaica,2021,25.6,BOTHSEX,G,A,PERCENT,ALLAGE,G
+112,2,2.1,2.1.2,AG_PRD_FIESS,Prevalence of severe food insecurity (%),388,Jamaica,2021,27.1,FEMALE,G,A,PERCENT,15+,G
+113,2,2.1,2.1.2,AG_PRD_FIESS,Prevalence of severe food insecurity (%),388,Jamaica,2021,24.2,MALE,G,A,PERCENT,15+,G
+114,2,2.1,2.1.2,AG_PRD_FIESS,Prevalence of severe food insecurity (%),388,Jamaica,2022,,BOTHSEX,G,O,PERCENT,ALLAGE,
+115,2,2.1,2.1.2,AG_PRD_FIESS,Prevalence of severe food insecurity (%),388,Jamaica,2022,,FEMALE,G,O,PERCENT,15+,
+116,2,2.1,2.1.2,AG_PRD_FIESS,Prevalence of severe food insecurity (%),388,Jamaica,2022,,MALE,G,O,PERCENT,15+,
+117,2,2.1,2.1.2,AG_PRD_FIESS,Prevalence of severe food insecurity (%),780,Trinidad and Tobago,2020,10,MALE,G,A,PERCENT,15+,G
+118,2,2.1,2.1.2,AG_PRD_FIESS,Prevalence of severe food insecurity (%),780,Trinidad and Tobago,2020,10.4,FEMALE,G,A,PERCENT,15+,G
+119,2,2.1,2.1.2,AG_PRD_FIESS,Prevalence of severe food insecurity (%),780,Trinidad and Tobago,2020,10.2,BOTHSEX,G,A,PERCENT,ALLAGE,G
+120,2,2.1,2.1.2,AG_PRD_FIESS,Prevalence of severe food insecurity (%),780,Trinidad and Tobago,2021,10.2,BOTHSEX,G,A,PERCENT,ALLAGE,G
+121,2,2.1,2.1.2,AG_PRD_FIESS,Prevalence of severe food insecurity (%),780,Trinidad and Tobago,2021,10.4,FEMALE,G,A,PERCENT,15+,G
+122,2,2.1,2.1.2,AG_PRD_FIESS,Prevalence of severe food insecurity (%),780,Trinidad and Tobago,2021,10,MALE,G,A,PERCENT,15+,G
+123,2,2.1,2.1.2,AG_PRD_FIESS,Prevalence of severe food insecurity (%),780,Trinidad and Tobago,2022,,BOTHSEX,G,O,PERCENT,ALLAGE,
+124,2,2.1,2.1.2,AG_PRD_FIESS,Prevalence of severe food insecurity (%),780,Trinidad and Tobago,2022,,FEMALE,G,O,PERCENT,15+,
+125,2,2.1,2.1.2,AG_PRD_FIESS,Prevalence of severe food insecurity (%),780,Trinidad and Tobago,2022,,MALE,G,O,PERCENT,15+,
+126,2,2.1,2.1.2,AG_PRD_FIESSN,Number of severely food insecure people (thousands of people),44,Bahamas,2020,<100,FEMALE,G,A,NUM_TH,15+,G
+127,2,2.1,2.1.2,AG_PRD_FIESSN,Number of severely food insecure people (thousands of people),44,Bahamas,2020,<100,BOTHSEX,G,A,NUM_TH,ALLAGE,G
+128,2,2.1,2.1.2,AG_PRD_FIESSN,Number of severely food insecure people (thousands of people),44,Bahamas,2020,<100,MALE,G,A,NUM_TH,15+,G
+129,2,2.1,2.1.2,AG_PRD_FIESSN,Number of severely food insecure people (thousands of people),44,Bahamas,2021,<100,BOTHSEX,G,A,NUM_TH,ALLAGE,G
+130,2,2.1,2.1.2,AG_PRD_FIESSN,Number of severely food insecure people (thousands of people),44,Bahamas,2021,<100,FEMALE,G,A,NUM_TH,15+,G
+131,2,2.1,2.1.2,AG_PRD_FIESSN,Number of severely food insecure people (thousands of people),44,Bahamas,2021,<100,MALE,G,A,NUM_TH,15+,G
+132,2,2.1,2.1.2,AG_PRD_FIESSN,Number of severely food insecure people (thousands of people),44,Bahamas,2022,,FEMALE,G,O,NUM_TH,15+,
+133,2,2.1,2.1.2,AG_PRD_FIESSN,Number of severely food insecure people (thousands of people),44,Bahamas,2022,,MALE,G,O,NUM_TH,15+,
+134,2,2.1,2.1.2,AG_PRD_FIESSN,Number of severely food insecure people (thousands of people),44,Bahamas,2022,,BOTHSEX,G,O,NUM_TH,ALLAGE,
+135,2,2.1,2.1.2,AG_PRD_FIESSN,Number of severely food insecure people (thousands of people),52,Barbados,2020,<100,BOTHSEX,G,A,NUM_TH,ALLAGE,G
+136,2,2.1,2.1.2,AG_PRD_FIESSN,Number of severely food insecure people (thousands of people),52,Barbados,2020,<100,MALE,G,A,NUM_TH,15+,G
+137,2,2.1,2.1.2,AG_PRD_FIESSN,Number of severely food insecure people (thousands of people),52,Barbados,2020,<100,FEMALE,G,A,NUM_TH,15+,G
+138,2,2.1,2.1.2,AG_PRD_FIESSN,Number of severely food insecure people (thousands of people),52,Barbados,2021,<100,FEMALE,G,A,NUM_TH,15+,G
+139,2,2.1,2.1.2,AG_PRD_FIESSN,Number of severely food insecure people (thousands of people),52,Barbados,2021,<100,MALE,G,A,NUM_TH,15+,G
+140,2,2.1,2.1.2,AG_PRD_FIESSN,Number of severely food insecure people (thousands of people),52,Barbados,2021,<100,BOTHSEX,G,A,NUM_TH,ALLAGE,G
+141,2,2.1,2.1.2,AG_PRD_FIESSN,Number of severely food insecure people (thousands of people),52,Barbados,2022,,MALE,G,O,NUM_TH,15+,
+142,2,2.1,2.1.2,AG_PRD_FIESSN,Number of severely food insecure people (thousands of people),52,Barbados,2022,,FEMALE,G,O,NUM_TH,15+,
+143,2,2.1,2.1.2,AG_PRD_FIESSN,Number of severely food insecure people (thousands of people),52,Barbados,2022,,BOTHSEX,G,O,NUM_TH,ALLAGE,
+144,2,2.1,2.1.2,AG_PRD_FIESSN,Number of severely food insecure people (thousands of people),388,Jamaica,2020,215.5,MALE,G,A,NUM_TH,15+,G
+145,2,2.1,2.1.2,AG_PRD_FIESSN,Number of severely food insecure people (thousands of people),388,Jamaica,2020,652.6,BOTHSEX,G,A,NUM_TH,ALLAGE,G
+146,2,2.1,2.1.2,AG_PRD_FIESSN,Number of severely food insecure people (thousands of people),388,Jamaica,2020,302.3,FEMALE,G,A,NUM_TH,15+,G
+147,2,2.1,2.1.2,AG_PRD_FIESSN,Number of severely food insecure people (thousands of people),388,Jamaica,2021,308.8,FEMALE,G,A,NUM_TH,15+,G
+148,2,2.1,2.1.2,AG_PRD_FIESSN,Number of severely food insecure people (thousands of people),388,Jamaica,2021,723.7,BOTHSEX,G,A,NUM_TH,ALLAGE,G
+149,2,2.1,2.1.2,AG_PRD_FIESSN,Number of severely food insecure people (thousands of people),388,Jamaica,2021,268,MALE,G,A,NUM_TH,15+,G
+150,2,2.1,2.1.2,AG_PRD_FIESSN,Number of severely food insecure people (thousands of people),388,Jamaica,2022,,FEMALE,G,O,NUM_TH,15+,
+151,2,2.1,2.1.2,AG_PRD_FIESSN,Number of severely food insecure people (thousands of people),388,Jamaica,2022,,MALE,G,O,NUM_TH,15+,
+152,2,2.1,2.1.2,AG_PRD_FIESSN,Number of severely food insecure people (thousands of people),388,Jamaica,2022,,BOTHSEX,G,O,NUM_TH,ALLAGE,
+153,2,2.1,2.1.2,AG_PRD_FIESSN,Number of severely food insecure people (thousands of people),780,Trinidad and Tobago,2020,155.2,BOTHSEX,G,A,NUM_TH,ALLAGE,G
+154,2,2.1,2.1.2,AG_PRD_FIESSN,Number of severely food insecure people (thousands of people),780,Trinidad and Tobago,2020,<100,FEMALE,G,A,NUM_TH,15+,G
+155,2,2.1,2.1.2,AG_PRD_FIESSN,Number of severely food insecure people (thousands of people),780,Trinidad and Tobago,2020,<100,MALE,G,A,NUM_TH,15+,G
+156,2,2.1,2.1.2,AG_PRD_FIESSN,Number of severely food insecure people (thousands of people),780,Trinidad and Tobago,2021,<100,MALE,G,A,NUM_TH,15+,G
+157,2,2.1,2.1.2,AG_PRD_FIESSN,Number of severely food insecure people (thousands of people),780,Trinidad and Tobago,2021,<100,FEMALE,G,A,NUM_TH,15+,G
+158,2,2.1,2.1.2,AG_PRD_FIESSN,Number of severely food insecure people (thousands of people),780,Trinidad and Tobago,2021,155.5,BOTHSEX,G,A,NUM_TH,ALLAGE,G
+159,2,2.1,2.1.2,AG_PRD_FIESSN,Number of severely food insecure people (thousands of people),780,Trinidad and Tobago,2022,,MALE,G,O,NUM_TH,15+,
+160,2,2.1,2.1.2,AG_PRD_FIESSN,Number of severely food insecure people (thousands of people),780,Trinidad and Tobago,2022,,BOTHSEX,G,O,NUM_TH,ALLAGE,
+161,2,2.1,2.1.2,AG_PRD_FIESSN,Number of severely food insecure people (thousands of people),780,Trinidad and Tobago,2022,,FEMALE,G,O,NUM_TH,15+,
+162,2,2.2,2.2.1,SH_STA_STNT,Proportion of children moderately or severely stunted (%),52,Barbados,2020,6.2,,G,A,PER_POP_U5,<5Y,M
+163,2,2.2,2.2.1,SH_STA_STNT,Proportion of children moderately or severely stunted (%),52,Barbados,2021,6.1,,G,A,PER_POP_U5,<5Y,M
+164,2,2.2,2.2.1,SH_STA_STNT,Proportion of children moderately or severely stunted (%),52,Barbados,2022,6,,G,A,PER_POP_U5,<5Y,M
+165,2,2.2,2.2.1,SH_STA_STNT,Proportion of children moderately or severely stunted (%),388,Jamaica,2020,6.5,,G,A,PER_POP_U5,<5Y,M
+166,2,2.2,2.2.1,SH_STA_STNT,Proportion of children moderately or severely stunted (%),388,Jamaica,2021,6.5,,G,A,PER_POP_U5,<5Y,M
+167,2,2.2,2.2.1,SH_STA_STNT,Proportion of children moderately or severely stunted (%),388,Jamaica,2022,6.5,,G,A,PER_POP_U5,<5Y,M
+168,2,2.2,2.2.1,SH_STA_STNT,Proportion of children moderately or severely stunted (%),780,Trinidad and Tobago,2020,8.8,,G,A,PER_POP_U5,<5Y,M
+169,2,2.2,2.2.1,SH_STA_STNT,Proportion of children moderately or severely stunted (%),780,Trinidad and Tobago,2021,8.8,,G,A,PER_POP_U5,<5Y,M
+170,2,2.2,2.2.1,SH_STA_STNT,Proportion of children moderately or severely stunted (%),780,Trinidad and Tobago,2022,8.8,,G,A,PER_POP_U5,<5Y,M
+171,2,2.2,2.2.1,SH_STA_STNTN,Children moderately or severely stunted (thousands),52,Barbados,2020,0.9,,G,A,NUM_TH,<5Y,M
+172,2,2.2,2.2.1,SH_STA_STNTN,Children moderately or severely stunted (thousands),52,Barbados,2021,0.9,,G,A,NUM_TH,<5Y,M
+173,2,2.2,2.2.1,SH_STA_STNTN,Children moderately or severely stunted (thousands),52,Barbados,2022,0.9,,G,A,NUM_TH,<5Y,M
+174,2,2.2,2.2.1,SH_STA_STNTN,Children moderately or severely stunted (thousands),388,Jamaica,2020,11.4,,G,A,NUM_TH,<5Y,M
+175,2,2.2,2.2.1,SH_STA_STNTN,Children moderately or severely stunted (thousands),388,Jamaica,2021,11,,G,A,NUM_TH,<5Y,M
+176,2,2.2,2.2.1,SH_STA_STNTN,Children moderately or severely stunted (thousands),388,Jamaica,2022,10.7,,G,A,NUM_TH,<5Y,M
+177,2,2.2,2.2.1,SH_STA_STNTN,Children moderately or severely stunted (thousands),780,Trinidad and Tobago,2020,8.3,,G,A,NUM_TH,<5Y,M
+178,2,2.2,2.2.1,SH_STA_STNTN,Children moderately or severely stunted (thousands),780,Trinidad and Tobago,2021,8.1,,G,A,NUM_TH,<5Y,M
+179,2,2.2,2.2.1,SH_STA_STNTN,Children moderately or severely stunted (thousands),780,Trinidad and Tobago,2022,8,,G,A,NUM_TH,<5Y,M
+180,2,2.2,2.2.2,SN_STA_OVWGT,Proportion of children moderately or severely overweight (%),52,Barbados,2020,12.7,,G,A,PER_POP_U5,<5Y,M
+181,2,2.2,2.2.2,SN_STA_OVWGT,Proportion of children moderately or severely overweight (%),52,Barbados,2021,12.6,,G,A,PER_POP_U5,<5Y,M
+182,2,2.2,2.2.2,SN_STA_OVWGT,Proportion of children moderately or severely overweight (%),52,Barbados,2022,12.5,,G,A,PER_POP_U5,<5Y,M
+183,2,2.2,2.2.2,SN_STA_OVWGT,Proportion of children moderately or severely overweight (%),388,Jamaica,2020,6,,G,A,PER_POP_U5,<5Y,M
+184,2,2.2,2.2.2,SN_STA_OVWGT,Proportion of children moderately or severely overweight (%),388,Jamaica,2021,5.8,,G,A,PER_POP_U5,<5Y,M
+185,2,2.2,2.2.2,SN_STA_OVWGT,Proportion of children moderately or severely overweight (%),388,Jamaica,2022,5.7,,G,A,PER_POP_U5,<5Y,M
+186,2,2.2,2.2.2,SN_STA_OVWGT,Proportion of children moderately or severely overweight (%),780,Trinidad and Tobago,2020,13.7,,G,A,PER_POP_U5,<5Y,M
+187,2,2.2,2.2.2,SN_STA_OVWGT,Proportion of children moderately or severely overweight (%),780,Trinidad and Tobago,2021,13.9,,G,A,PER_POP_U5,<5Y,M
+188,2,2.2,2.2.2,SN_STA_OVWGT,Proportion of children moderately or severely overweight (%),780,Trinidad and Tobago,2022,13.9,,G,A,PER_POP_U5,<5Y,M
+189,2,2.2,2.2.2,SN_STA_OVWGTN,Children moderately or severely overweight (thousands),52,Barbados,2020,1.9,,G,A,NUM_TH,<5Y,M
+190,2,2.2,2.2.2,SN_STA_OVWGTN,Children moderately or severely overweight (thousands),52,Barbados,2021,1.9,,G,A,NUM_TH,<5Y,M
+191,2,2.2,2.2.2,SN_STA_OVWGTN,Children moderately or severely overweight (thousands),52,Barbados,2022,1.9,,G,A,NUM_TH,<5Y,M
+192,2,2.2,2.2.2,SN_STA_OVWGTN,Children moderately or severely overweight (thousands),388,Jamaica,2020,10.4,,G,A,NUM_TH,<5Y,M
+193,2,2.2,2.2.2,SN_STA_OVWGTN,Children moderately or severely overweight (thousands),388,Jamaica,2021,9.9,,G,A,NUM_TH,<5Y,M
+194,2,2.2,2.2.2,SN_STA_OVWGTN,Children moderately or severely overweight (thousands),388,Jamaica,2022,9.4,,G,A,NUM_TH,<5Y,M
+195,2,2.2,2.2.2,SN_STA_OVWGTN,Children moderately or severely overweight (thousands),780,Trinidad and Tobago,2020,12.9,,G,A,NUM_TH,<5Y,M
+196,2,2.2,2.2.2,SN_STA_OVWGTN,Children moderately or severely overweight (thousands),780,Trinidad and Tobago,2021,12.8,,G,A,NUM_TH,<5Y,M
+197,2,2.2,2.2.2,SN_STA_OVWGTN,Children moderately or severely overweight (thousands),780,Trinidad and Tobago,2022,12.6,,G,A,NUM_TH,<5Y,M
+198,2,2.4,2.4.1,AG_LND_AGRBIO,Proportion of agricultural land area that has achieved an acceptable or desirable level of use of agro-biodiversity supportive practices (%),388,Jamaica,2020,,,G,O,PERCENT,,
+199,2,2.4,2.4.1,AG_LND_AGRBIO,Proportion of agricultural land area that has achieved an acceptable or desirable level of use of agro-biodiversity supportive practices (%),388,Jamaica,2021,95,,G,A,PERCENT,,C
+200,2,2.4,2.4.1,AG_LND_AGRWAG,Proportion of agricultural land area that has achieved an acceptable or desirable level of wage rate in agriculture (%),388,Jamaica,2020,,,G,O,PERCENT,,
+201,2,2.4,2.4.1,AG_LND_AGRWAG,Proportion of agricultural land area that has achieved an acceptable or desirable level of wage rate in agriculture (%),388,Jamaica,2021,94,,G,A,PERCENT,,C
+202,2,2.4,2.4.1,AG_LND_FERTMG,Proportion of agricultural land area that has achieved an acceptable or desirable level of management of fertilizers (%),388,Jamaica,2020,,,G,O,PERCENT,,
+203,2,2.4,2.4.1,AG_LND_FERTMG,Proportion of agricultural land area that has achieved an acceptable or desirable level of management of fertilizers (%),388,Jamaica,2021,68,,G,A,PERCENT,,C
+204,2,2.4,2.4.1,AG_LND_FOVH,Proportion of agricultural land area that has achieved an acceptable or desirable level of farm output value per hectare (%),388,Jamaica,2020,,,G,O,PERCENT,,
+205,2,2.4,2.4.1,AG_LND_FOVH,Proportion of agricultural land area that has achieved an acceptable or desirable level of farm output value per hectare (%),388,Jamaica,2021,70,,G,A,PERCENT,,C
+206,2,2.4,2.4.1,AG_LND_H2OAVAIL,Proportion of agricultural land area that has achieved an acceptable or desirable level of variation in water availability (%),388,Jamaica,2020,,,G,O,PERCENT,,
+207,2,2.4,2.4.1,AG_LND_H2OAVAIL,Proportion of agricultural land area that has achieved an acceptable or desirable level of variation in water availability (%),388,Jamaica,2021,62,,G,A,PERCENT,,C
+208,2,2.4,2.4.1,AG_LND_LNDSTR,Proportion of agricultural land area that has achieved an acceptable or desirable level of secure tenure rights to agricultural land (%),388,Jamaica,2020,,,G,O,PERCENT,,
+209,2,2.4,2.4.1,AG_LND_LNDSTR,Proportion of agricultural land area that has achieved an acceptable or desirable level of secure tenure rights to agricultural land (%),388,Jamaica,2021,57,,G,A,PERCENT,,C
+210,2,2.4,2.4.1,AG_LND_NFI,Proportion of agricultural land area that has achieved an acceptable or desirable level of net farm income (%),388,Jamaica,2020,,,G,O,PERCENT,,
+211,2,2.4,2.4.1,AG_LND_NFI,Proportion of agricultural land area that has achieved an acceptable or desirable level of net farm income (%),388,Jamaica,2021,91,,G,A,PERCENT,,C
+212,2,2.4,2.4.1,AG_LND_PSTCDSMG,Proportion of agricultural land area that has achieved an acceptable or desirable level of management of pesticides (%),388,Jamaica,2020,,,G,O,PERCENT,,
+213,2,2.4,2.4.1,AG_LND_PSTCDSMG,Proportion of agricultural land area that has achieved an acceptable or desirable level of management of pesticides (%),388,Jamaica,2021,85,,G,A,PERCENT,,C
+214,2,2.4,2.4.1,AG_LND_RMM,Proportion of agricultural land area that has achieved an acceptable or desirable level of risk mitigation mechanisms (%),388,Jamaica,2020,,,G,O,PERCENT,,
+215,2,2.4,2.4.1,AG_LND_RMM,Proportion of agricultural land area that has achieved an acceptable or desirable level of risk mitigation mechanisms (%),388,Jamaica,2021,80,,G,A,PERCENT,,C
+216,2,2.4,2.4.1,AG_LND_SDGRD,Proportion of agricultural land area that has achieved an acceptable or desirable level of soil degradation (%),388,Jamaica,2020,,,G,O,PERCENT,,
+217,2,2.4,2.4.1,AG_LND_SDGRD,Proportion of agricultural land area that has achieved an acceptable or desirable level of soil degradation (%),388,Jamaica,2021,76,,G,A,PERCENT,,C
+218,2,2.5,2.5.1,ER_GRF_ANIMKPT,Number of local breeds kept in the country,44,Bahamas,2020,1,,G,A,NUMBER,,C
+219,2,2.5,2.5.1,ER_GRF_ANIMKPT,Number of local breeds kept in the country,44,Bahamas,2021,1,,G,A,NUMBER,,C
+220,2,2.5,2.5.1,ER_GRF_ANIMKPT,Number of local breeds kept in the country,44,Bahamas,2022,1,,G,A,NUMBER,,C
+221,2,2.5,2.5.1,ER_GRF_ANIMKPT,Number of local breeds kept in the country,52,Barbados,2020,6,,G,A,NUMBER,,C
+222,2,2.5,2.5.1,ER_GRF_ANIMKPT,Number of local breeds kept in the country,52,Barbados,2021,6,,G,A,NUMBER,,C
+223,2,2.5,2.5.1,ER_GRF_ANIMKPT,Number of local breeds kept in the country,52,Barbados,2022,6,,G,A,NUMBER,,C
+224,2,2.5,2.5.1,ER_GRF_ANIMKPT,Number of local breeds kept in the country,388,Jamaica,2020,8,,G,A,NUMBER,,C
+225,2,2.5,2.5.1,ER_GRF_ANIMKPT,Number of local breeds kept in the country,388,Jamaica,2021,8,,G,A,NUMBER,,C
+226,2,2.5,2.5.1,ER_GRF_ANIMKPT,Number of local breeds kept in the country,388,Jamaica,2022,8,,G,A,NUMBER,,C
+227,2,2.5,2.5.1,ER_GRF_ANIMKPT,Number of local breeds kept in the country,780,Trinidad and Tobago,2020,5,,G,A,NUMBER,,C
+228,2,2.5,2.5.1,ER_GRF_ANIMKPT,Number of local breeds kept in the country,780,Trinidad and Tobago,2021,5,,G,A,NUMBER,,C
+229,2,2.5,2.5.1,ER_GRF_ANIMKPT,Number of local breeds kept in the country,780,Trinidad and Tobago,2022,5,,G,A,NUMBER,,C
+230,2,2.5,2.5.1,ER_GRF_ANIMKPT_TRB,Number of transboundary breeds (including extinct ones),44,Bahamas,2020,1,,G,A,NUMBER,,C
+231,2,2.5,2.5.1,ER_GRF_ANIMKPT_TRB,Number of transboundary breeds (including extinct ones),44,Bahamas,2021,1,,G,A,NUMBER,,C
+232,2,2.5,2.5.1,ER_GRF_ANIMKPT_TRB,Number of transboundary breeds (including extinct ones),44,Bahamas,2022,1,,G,A,NUMBER,,C
+233,2,2.5,2.5.1,ER_GRF_ANIMKPT_TRB,Number of transboundary breeds (including extinct ones),52,Barbados,2020,23,,G,A,NUMBER,,C
+234,2,2.5,2.5.1,ER_GRF_ANIMKPT_TRB,Number of transboundary breeds (including extinct ones),52,Barbados,2021,23,,G,A,NUMBER,,C
+235,2,2.5,2.5.1,ER_GRF_ANIMKPT_TRB,Number of transboundary breeds (including extinct ones),52,Barbados,2022,23,,G,A,NUMBER,,C
+236,2,2.5,2.5.1,ER_GRF_ANIMKPT_TRB,Number of transboundary breeds (including extinct ones),388,Jamaica,2020,18,,G,A,NUMBER,,C
+237,2,2.5,2.5.1,ER_GRF_ANIMKPT_TRB,Number of transboundary breeds (including extinct ones),388,Jamaica,2021,18,,G,A,NUMBER,,C
+238,2,2.5,2.5.1,ER_GRF_ANIMKPT_TRB,Number of transboundary breeds (including extinct ones),388,Jamaica,2022,18,,G,A,NUMBER,,C
+239,2,2.5,2.5.1,ER_GRF_ANIMKPT_TRB,Number of transboundary breeds (including extinct ones),780,Trinidad and Tobago,2020,34,,G,A,NUMBER,,C
+240,2,2.5,2.5.1,ER_GRF_ANIMKPT_TRB,Number of transboundary breeds (including extinct ones),780,Trinidad and Tobago,2021,34,,G,A,NUMBER,,C
+241,2,2.5,2.5.1,ER_GRF_ANIMKPT_TRB,Number of transboundary breeds (including extinct ones),780,Trinidad and Tobago,2022,34,,G,A,NUMBER,,C
+242,2,2.5,2.5.1,ER_GRF_ANIMRCNTN,Number of local breeds for which sufficient genetic resources are stored for reconstitution,52,Barbados,2020,0,,G,A,NUMBER,,C
+243,2,2.5,2.5.1,ER_GRF_ANIMRCNTN,Number of local breeds for which sufficient genetic resources are stored for reconstitution,52,Barbados,2021,0,,G,A,NUMBER,,C
+244,2,2.5,2.5.1,ER_GRF_ANIMRCNTN,Number of local breeds for which sufficient genetic resources are stored for reconstitution,52,Barbados,2022,0,,G,A,NUMBER,,C
+245,2,2.5,2.5.1,ER_GRF_ANIMRCNTN_TRB,Number of transboundary breeds for which sufficient genetic resources are stored for reconstitution,52,Barbados,2020,0,,G,A,NUMBER,,C
+246,2,2.5,2.5.1,ER_GRF_ANIMRCNTN_TRB,Number of transboundary breeds for which sufficient genetic resources are stored for reconstitution,52,Barbados,2021,0,,G,A,NUMBER,,C
+247,2,2.5,2.5.1,ER_GRF_ANIMRCNTN_TRB,Number of transboundary breeds for which sufficient genetic resources are stored for reconstitution,52,Barbados,2022,0,,G,A,NUMBER,,C
+248,2,2.5,2.5.1,ER_GRF_PLNTSTOR,Plant genetic resources accessions stored ex situ (number),780,Trinidad and Tobago,2020,640,,G,G,NUMBER,,E
+249,2,2.5,2.5.1,ER_GRF_PLNTSTOR,Plant genetic resources accessions stored ex situ (number),780,Trinidad and Tobago,2021,736,,G,G,NUMBER,,E
+250,2,2.5,2.5.2,ER_NOEX_LBREDN,Number of local breeds (not extinct) (number),44,Bahamas,2020,1,,G,A,NUMBER,,C
+251,2,2.5,2.5.2,ER_NOEX_LBREDN,Number of local breeds (not extinct) (number),44,Bahamas,2021,1,,G,A,NUMBER,,C
+252,2,2.5,2.5.2,ER_NOEX_LBREDN,Number of local breeds (not extinct) (number),44,Bahamas,2022,1,,G,A,NUMBER,,C
+253,2,2.5,2.5.2,ER_NOEX_LBREDN,Number of local breeds (not extinct) (number),52,Barbados,2020,6,,G,A,NUMBER,,C
+254,2,2.5,2.5.2,ER_NOEX_LBREDN,Number of local breeds (not extinct) (number),52,Barbados,2021,6,,G,A,NUMBER,,C
+255,2,2.5,2.5.2,ER_NOEX_LBREDN,Number of local breeds (not extinct) (number),52,Barbados,2022,6,,G,A,NUMBER,,C
+256,2,2.5,2.5.2,ER_NOEX_LBREDN,Number of local breeds (not extinct) (number),388,Jamaica,2020,8,,G,A,NUMBER,,C
+257,2,2.5,2.5.2,ER_NOEX_LBREDN,Number of local breeds (not extinct) (number),388,Jamaica,2021,8,,G,A,NUMBER,,C
+258,2,2.5,2.5.2,ER_NOEX_LBREDN,Number of local breeds (not extinct) (number),388,Jamaica,2022,8,,G,A,NUMBER,,C
+259,2,2.5,2.5.2,ER_NOEX_LBREDN,Number of local breeds (not extinct) (number),780,Trinidad and Tobago,2020,5,,G,A,NUMBER,,C
+260,2,2.5,2.5.2,ER_NOEX_LBREDN,Number of local breeds (not extinct) (number),780,Trinidad and Tobago,2021,5,,G,A,NUMBER,,C
+261,2,2.5,2.5.2,ER_NOEX_LBREDN,Number of local breeds (not extinct) (number),780,Trinidad and Tobago,2022,5,,G,A,NUMBER,,C
+262,2,2.5,2.5.2,ER_RSK_LBREDS,Proportion of local breeds classified as being at risk as a percentage of local breeds with known level of extinction risk (%),388,Jamaica,2020,,,G,O,PERCENT,,
+263,2,2.5,2.5.2,ER_RSK_LBREDS,Proportion of local breeds classified as being at risk as a percentage of local breeds with known level of extinction risk (%),388,Jamaica,2021,,,G,O,PERCENT,,
+264,2,2.5,2.5.2,ER_RSK_LBREDS,Proportion of local breeds classified as being at risk as a percentage of local breeds with known level of extinction risk (%),388,Jamaica,2022,,,G,O,PERCENT,,
+265,2,2.5,2.5.2,ER_UNK_LBREDN,Number of local breeds with unknown risk status (number),44,Bahamas,2020,1,,G,A,NUMBER,,C
+266,2,2.5,2.5.2,ER_UNK_LBREDN,Number of local breeds with unknown risk status (number),44,Bahamas,2021,1,,G,A,NUMBER,,C
+267,2,2.5,2.5.2,ER_UNK_LBREDN,Number of local breeds with unknown risk status (number),44,Bahamas,2022,1,,G,A,NUMBER,,C
+268,2,2.5,2.5.2,ER_UNK_LBREDN,Number of local breeds with unknown risk status (number),52,Barbados,2020,6,,G,A,NUMBER,,C
+269,2,2.5,2.5.2,ER_UNK_LBREDN,Number of local breeds with unknown risk status (number),52,Barbados,2021,6,,G,A,NUMBER,,C
+270,2,2.5,2.5.2,ER_UNK_LBREDN,Number of local breeds with unknown risk status (number),52,Barbados,2022,6,,G,A,NUMBER,,C
+271,2,2.5,2.5.2,ER_UNK_LBREDN,Number of local breeds with unknown risk status (number),388,Jamaica,2020,8,,G,A,NUMBER,,C
+272,2,2.5,2.5.2,ER_UNK_LBREDN,Number of local breeds with unknown risk status (number),388,Jamaica,2021,8,,G,A,NUMBER,,C
+273,2,2.5,2.5.2,ER_UNK_LBREDN,Number of local breeds with unknown risk status (number),388,Jamaica,2022,8,,G,A,NUMBER,,C
+274,2,2.5,2.5.2,ER_UNK_LBREDN,Number of local breeds with unknown risk status (number),780,Trinidad and Tobago,2020,5,,G,A,NUMBER,,C
+275,2,2.5,2.5.2,ER_UNK_LBREDN,Number of local breeds with unknown risk status (number),780,Trinidad and Tobago,2021,5,,G,A,NUMBER,,C
+276,2,2.5,2.5.2,ER_UNK_LBREDN,Number of local breeds with unknown risk status (number),780,Trinidad and Tobago,2022,5,,G,A,NUMBER,,C
+277,2,2.a,2.a.1,AG_PRD_AGVAS,Agriculture value added share of GDP (%),44,Bahamas,2020,0.83,,G,A,PERCENT,,C
+278,2,2.a,2.a.1,AG_PRD_AGVAS,Agriculture value added share of GDP (%),44,Bahamas,2021,0.49,,G,A,PERCENT,,C
+279,2,2.a,2.a.1,AG_PRD_AGVAS,Agriculture value added share of GDP (%),52,Barbados,2020,,,G,O,PERCENT,,
+280,2,2.a,2.a.1,AG_PRD_AGVAS,Agriculture value added share of GDP (%),52,Barbados,2021,,,G,O,PERCENT,,
+281,2,2.a,2.a.1,AG_PRD_AGVAS,Agriculture value added share of GDP (%),388,Jamaica,2020,8.68,,G,A,PERCENT,,C
+282,2,2.a,2.a.1,AG_PRD_AGVAS,Agriculture value added share of GDP (%),388,Jamaica,2021,8.34,,G,A,PERCENT,,C
+283,2,2.a,2.a.1,AG_PRD_AGVAS,Agriculture value added share of GDP (%),780,Trinidad and Tobago,2020,1.17,,G,A,PERCENT,,C
+284,2,2.a,2.a.1,AG_PRD_AGVAS,Agriculture value added share of GDP (%),780,Trinidad and Tobago,2021,0.96,,G,A,PERCENT,,C
+285,2,2.a,2.a.1,AG_PRD_ORTIND,Agriculture orientation index for government expenditures,44,Bahamas,2020,1.15,,G,A,INDEX,,C
+286,2,2.a,2.a.1,AG_PRD_ORTIND,Agriculture orientation index for government expenditures,44,Bahamas,2021,1.74,,G,A,INDEX,,C
+287,2,2.a,2.a.1,AG_PRD_ORTIND,Agriculture orientation index for government expenditures,52,Barbados,2020,,,G,O,INDEX,,
+288,2,2.a,2.a.1,AG_PRD_ORTIND,Agriculture orientation index for government expenditures,52,Barbados,2021,,,G,O,INDEX,,
+289,2,2.a,2.a.1,AG_PRD_ORTIND,Agriculture orientation index for government expenditures,388,Jamaica,2020,0.2,,G,A,INDEX,,C
+290,2,2.a,2.a.1,AG_PRD_ORTIND,Agriculture orientation index for government expenditures,388,Jamaica,2021,0.16,,G,A,INDEX,,C
+291,2,2.a,2.a.1,AG_PRD_ORTIND,Agriculture orientation index for government expenditures,780,Trinidad and Tobago,2020,0.95,,G,A,INDEX,,C
+292,2,2.a,2.a.1,AG_PRD_ORTIND,Agriculture orientation index for government expenditures,780,Trinidad and Tobago,2021,1.17,,G,E,INDEX,,E
+293,2,2.a,2.a.1,AG_XPD_AGSGB,Agriculture share of Government Expenditure (%),44,Bahamas,2020,0.96,,G,A,PERCENT,,C
+294,2,2.a,2.a.1,AG_XPD_AGSGB,Agriculture share of Government Expenditure (%),44,Bahamas,2021,0.85,,G,A,PERCENT,,C
+295,2,2.a,2.a.1,AG_XPD_AGSGB,Agriculture share of Government Expenditure (%),52,Barbados,2020,,,G,O,PERCENT,,
+296,2,2.a,2.a.1,AG_XPD_AGSGB,Agriculture share of Government Expenditure (%),52,Barbados,2021,,,G,O,PERCENT,,
+297,2,2.a,2.a.1,AG_XPD_AGSGB,Agriculture share of Government Expenditure (%),388,Jamaica,2020,1.7,,G,A,PERCENT,,C
+298,2,2.a,2.a.1,AG_XPD_AGSGB,Agriculture share of Government Expenditure (%),388,Jamaica,2021,1.33,,G,A,PERCENT,,C
+299,2,2.a,2.a.1,AG_XPD_AGSGB,Agriculture share of Government Expenditure (%),780,Trinidad and Tobago,2020,1.11,,G,A,PERCENT,,C
+300,2,2.a,2.a.1,AG_XPD_AGSGB,Agriculture share of Government Expenditure (%),780,Trinidad and Tobago,2021,1.12,,G,E,PERCENT,,E
+301,2,2.a,2.a.2,DC_TOF_AGRL,"Total official flows (disbursements) for agriculture, by recipient countries (millions of constant 2021 United States dollars)",388,Jamaica,2020,23.76182,,G,,CON_USD_M,,C
+302,2,2.a,2.a.2,DC_TOF_AGRL,"Total official flows (disbursements) for agriculture, by recipient countries (millions of constant 2021 United States dollars)",388,Jamaica,2021,8.39519,,G,,CON_USD_M,,C
+303,2,2.c,2.c.1,AG_FPA_CFPI,"Indicator of Food Price Anomalies (IFPA), by Consumer Food Price Index",44,Bahamas,2020,0.83,,G,A,INDEX,,G
+304,2,2.c,2.c.1,AG_FPA_CFPI,"Indicator of Food Price Anomalies (IFPA), by Consumer Food Price Index",44,Bahamas,2021,0.04,,G,A,INDEX,,G
+305,2,2.c,2.c.1,AG_FPA_CFPI,"Indicator of Food Price Anomalies (IFPA), by Consumer Food Price Index",44,Bahamas,2022,,,G,O,INDEX,,
+306,2,2.c,2.c.1,AG_FPA_CFPI,"Indicator of Food Price Anomalies (IFPA), by Consumer Food Price Index",52,Barbados,2020,0.53,,G,A,INDEX,,G
+307,2,2.c,2.c.1,AG_FPA_CFPI,"Indicator of Food Price Anomalies (IFPA), by Consumer Food Price Index",52,Barbados,2021,-0.41,,G,A,INDEX,,G
+308,2,2.c,2.c.1,AG_FPA_CFPI,"Indicator of Food Price Anomalies (IFPA), by Consumer Food Price Index",52,Barbados,2022,,,G,O,INDEX,,
+309,2,2.c,2.c.1,AG_FPA_CFPI,"Indicator of Food Price Anomalies (IFPA), by Consumer Food Price Index",388,Jamaica,2020,0.52,,G,A,INDEX,,G
+310,2,2.c,2.c.1,AG_FPA_CFPI,"Indicator of Food Price Anomalies (IFPA), by Consumer Food Price Index",388,Jamaica,2021,-0.49,,G,A,INDEX,,G
+311,2,2.c,2.c.1,AG_FPA_CFPI,"Indicator of Food Price Anomalies (IFPA), by Consumer Food Price Index",388,Jamaica,2022,,,G,O,INDEX,,
+312,2,2.c,2.c.1,AG_FPA_CFPI,"Indicator of Food Price Anomalies (IFPA), by Consumer Food Price Index",780,Trinidad and Tobago,2020,-0.22,,G,A,INDEX,,G
+313,2,2.c,2.c.1,AG_FPA_CFPI,"Indicator of Food Price Anomalies (IFPA), by Consumer Food Price Index",780,Trinidad and Tobago,2021,-0.29,,G,A,INDEX,,G
+314,2,2.c,2.c.1,AG_FPA_CFPI,"Indicator of Food Price Anomalies (IFPA), by Consumer Food Price Index",780,Trinidad and Tobago,2022,,,G,O,INDEX,,

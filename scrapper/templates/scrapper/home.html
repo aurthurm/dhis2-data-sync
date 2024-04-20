@@ -143,9 +143,10 @@
 					'Content-Type': 'multipart/form-data'
 				},
 			}).then(({ data }) => {
-				this.uploads.data = data.data;
+				this.uploads.data = data;
 				this.uploads.updating = false;
-				console.log(data.data);
+				console.log(this.uploads.data);
+				console.log(typeof this.uploads.data);
 			});
 		}
 	  }

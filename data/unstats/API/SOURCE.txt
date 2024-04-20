@@ -1,0 +1,2 @@
+https://unstats.un.org/SDGAPI/swagger/
+https://unstats.un.org/sdgs/UNSDGAPIV5/swagger/index.html

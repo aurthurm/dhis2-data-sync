@@ -1,3 +1,4 @@
+from datetime import datetime
 import pandas as pd
 import numpy as np
 from django.shortcuts import render
@@ -8,6 +9,9 @@ from .resource import DHISAPI
 from .models import (
     OrganisatinalUnit, DataSet, DataElement, OptionSet, OptionSetOption
 )
+import sklearn
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
 
 
 def str_value(v):
@@ -176,29 +180,160 @@ def update_data_value_sets(request):
     
     
 def upload_file(request):
+    this_year = str(datetime.now().year)
+    org_units = OrganisatinalUnit.objects.all()
+    org_units_names = [o.name.lower().strip() for o in org_units]
+    data_elems = DataElement.objects.exclude(name__iendswith="c").exclude(name__icontains="cch").all()
     payload = None
+    api = DHISAPI()
+    url = api.make_url(settings.DATA_VALUE_SETS, dryRun="false", importStrategy="CREATE_AND_UPDATE", force="false")
+    print(url)
+    
+    datums = {"dataValues": []}
+    x_info = {}
+        
     if request.method == "POST":
         file = request.FILES['file']
-        df = pd.read_csv(file)
-        
-        api = DHISAPI()
-        url = api.make_url(settings.DATA_VALUE_SETS, dryRun="false", importStrategy="CREATE_AND_UPDATE", force="false")
-        
-        datums = {
-            "dataValues": [
-                {
-                "dataSet": str_value(row["DataSet"]),
-                "completeDate": str_value(row["CompleteDate"]),
-                "dataElement": str_value(row["DataElement"]),
-                "period": str_value(row["Period"]),
-                "orgUnit": str_value(row["OrgUnit"]),
-                "value": str_value(row["Value"]),
-                "comment": str_value(row["Comment"])
-                }  for _, row in df.iterrows()
-            ]
-        }
-        payload = api.send(url, data=datums)
-        
+        file_type = file.name.split(".")[-1] # file.name.endswith('.csv')
+        if file_type == "csv":
+            df = pd.read_csv(file)
+            df_cols = df.columns.tolist()
+            _all = []
+            for col in ["DataSet", "DataElement", "Period", "OrgUnit", "Value", "Comment"]:
+                if col in df_cols:
+                    _all.append(True)
+                else:
+                    _all.append(False)
+            if all(_all):
+                for _, row in df.iterrows():
+                    datums["dataValues"].append({
+                        "dataSet": str_value(row["DataSet"]),
+                        "completeDate": "",
+                        "dataElement": str_value(row["DataElement"]),
+                        "period": str_value(row["Period"]),
+                        "orgUnit": str_value(row["OrgUnit"]),
+                        "value": str_value(row["Value"]),
+                        "comment": str_value(row["Comment"])
+                    })
+                
+        elif file_type in ["xlsx", "xls"]:
+            
+            # df = pd.read_excel(file, sheet_name=sheets_subset, usecols=column_subset)
+            dfs = pd.read_excel(file, sheet_name=None)
+            unique_time_periods = []
+            indicators = {}
+            for sheet_name, sheet_goal in dfs.items():
+                if not sheet_name.lower().startswith("goal"):
+                    continue
+                
+                print(f"Processing sheet: {sheet_name}")
+                
+                for tp in sheet_goal['TimePeriod'].unique():
+                    if tp not in unique_time_periods:
+                        unique_time_periods.append(tp)
+                
+                sheet_goal = sheet_goal.sort_values(by=['GeoAreaName', 'TimePeriod'], ascending=False)
+                for _, sh_row in sheet_goal.iterrows():
+                    # if sh_row.GeoAreaName.lower().strip() in org_units_names and sh_row.TimePeriod == 2022:
+                    if sh_row.GeoAreaName.lower().strip() in org_units_names:
+                        exists = list(filter(lambda de: str(sh_row.Indicator).strip() in de.name, data_elems))
+                        if exists:
+                            if sh_row.Indicator not in indicators:
+                                indicators[sh_row.Indicator] = []
+                                
+                            old = dict(sh_row)
+                            for k, v in sh_row.items():
+                                old[k] = str_value(v)
+                                
+                            indicators[sh_row.Indicator].append(old)
+                            
+            # for k, v in indicators.items():
+            #     delem = data_elems.filter(name__icontains=str(k)).first()
+            #     if len(v) > 0:
+            #         print(f"{k} : {len(v)}")
+            #         for ou in org_units_names:
+            #             selected = list(filter(lambda x: x["GeoAreaName"].lower().strip() == ou, v))
+            #             _xsel = [_x['SeriesDescription'] for _x in selected]
+            #             _xsel.insert(0, delem.name)
+            #             if len(selected) > 0:
+            #                 print(f"{ou} : {len(selected)}")
+            #                 vectorizer = TfidfVectorizer()
+            #                 vectors = vectorizer.fit_transform(_xsel)
+            #                 similarity = cosine_similarity(vectors[0], vectors[1:])
+            #                 most_similar_index = similarity.argmax()
+            #                 perc = similarity[0, most_similar_index]
+                            
+            #                 _xsel = _xsel[1:]
+            #                 desc = _xsel[most_similar_index]
+            #                 print("--------------------------------------------")
+            #                 print("--------------------------------------------")
+            #                 print(delem.name)
+            #                 print(f"Best - {perc} - {desc}")
+            #                 print("--------------------------------------------")
+            #                 for index, _xs in enumerate(_xsel):
+            #                    print(f"{similarity[0, index]} : {_xs}") 
+            #                 print("\n")
+                 
+            print(f"Indicator keys {len(indicators.keys())}")
+            for k, v in indicators.items():
+                tracked_indicator = data_elems.filter(name__icontains=str(k)).first()
+                if len(v) > 0 and tracked_indicator:
+                    print(f"\n\nIndicator {k} : All Possible mappings fr all time periods --> {len(v)}")
+                    for ou in org_units_names:
+                        for tp in unique_time_periods:
+                            # filter those that belong to this org unit and time period
+                            filtrate = list(
+                                filter(
+                                    lambda x: x["GeoAreaName"].lower().strip() == ou and str(x["TimePeriod"]) == str(tp), 
+                                    v
+                                )
+                            )
+                            if len(filtrate) > 0: 
+                                org_unit = org_units.filter(name__iexact=ou).first()
+                                print(f"**{tp} Mappings for [{ou}] --> {len(filtrate)}  --> picking first ")
+                                
+                                if k not in x_info:
+                                    x_info[k] = {} 
+                                if ou not in x_info[k]:
+                                    x_info[k][ou] = {}
+                                    
+                                x_info[k][ou]["possibles"] = filtrate
+                                _maybe = filtrate[0]
+                                x_info[k][ou]["selected"] = _maybe
+                                
+                                datums["dataValues"].append({
+                                    "dataSet": tracked_indicator.dataset.dhis_id,
+                                    "completeDate": "",
+                                    "dataElement": tracked_indicator.dhis_id,
+                                    "period": str_value(_maybe["TimePeriod"]),
+                                    "orgUnit": org_unit.dhis_id,
+                                    "value": str_value(_maybe["Value"]),
+                                    "comment": ""
+                                })
+        ld = len(datums['dataValues'])
+        print(f"Datums: {ld}")
+        if ld <= 0:
+            payload = {
+                "success": False,
+                'error': "No data to send"
+            }
+        else:
+            try:
+                payload = api.send(url, data=datums)
+                payload = {
+                    "success": True,
+                    **payload,
+                }
+            except Exception as e:
+                payload = {
+                    "success": False,
+                    'error': e
+                }
+            
+    print(url)
+                          
     return JsonResponse({
-        "data": payload
+        **payload,
+        "extra": x_info,
+        "datums": datums
     })
