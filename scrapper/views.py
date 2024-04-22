@@ -155,7 +155,7 @@ def update_data_value_sets(request):
     }   
     pay_1 = api.send(url, data=works_values)
     
-    # send large bulks of data values which don't necessarily are logically related.
+    # send large bulks of data values are necessarily not logically related.
     # example = {
     #     "dataValues": [
     #         {
@@ -188,12 +188,18 @@ def upload_file(request):
     url = api.make_url(settings.DATA_VALUE_SETS, dryRun="false", importStrategy="CREATE_AND_UPDATE", force="false")
     print(url)
     
+    # dhis2 payload
     datums = {"dataValues": []}
+    # track indicator, orgunit and update values
+    indicators = {}
     x_info = {}
+    unique_time_periods = [] # track unique tim periods in the uploaded file
         
     if request.method == "POST":
         file = request.FILES['file']
         file_type = file.name.split(".")[-1] # file.name.endswith('.csv')
+
+        # handle CSV files
         if file_type == "csv":
             df = pd.read_csv(file)
             df_cols = df.columns.tolist()
@@ -216,47 +222,60 @@ def upload_file(request):
                             "value": _val,
                             "comment": str_value(row["Comment"])
                         })
-                
+        
+        # handle Excel files
         elif file_type in ["xlsx", "xls"]:
             
             # df = pd.read_excel(file, sheet_name=sheets_subset, usecols=column_subset)
             dfs = pd.read_excel(file, sheet_name=None)
-            unique_time_periods = []
-            indicators = {}
+
+            # loop through excell sheets
             for sheet_name, sheet_goal in dfs.items():
+                # We are only interested in sheets with Goal as part of its name
                 if not sheet_name.lower().startswith("goal"):
                     continue
                 
                 print(f"Processing sheet: {sheet_name}")
                 
+                # get unique periods in this goal sheet
                 for tp in sheet_goal['TimePeriod'].unique():
                     if tp not in unique_time_periods:
                         unique_time_periods.append(tp)
 
                 print(f"Periods in dataset: {unique_time_periods}")
 
+                # Sort data by  country  and then by year (period) in descending order
                 sheet_goal = sheet_goal.sort_values(by=['GeoAreaName', 'TimePeriod'], ascending=False)
+
+                # loop through each row of data in sheet, convert data to dict and track it
                 for _, sh_row in sheet_goal.iterrows():
-                    # if sh_row.GeoAreaName.lower().strip() in org_units_names and sh_row.TimePeriod == 2022:
+                    # match org unit between csv file and those retrieved from dhis
+                    # TODO: create a data cleaning pipeline to clean orgunits since some dont match exactly
                     if sh_row.GeoAreaName.lower().strip() in org_units_names:
+                        # filter and get the data element that match a given row in the sheet
                         exists = list(filter(lambda de: str(sh_row.dataElementCode).strip() in de.dhis_id, data_elems))
+                        # if match is found add it to the indicators tracker
                         if exists:
+                            # initialise by adding a key if not exist
                             if sh_row.dataElementCode not in indicators:
                                 indicators[sh_row.dataElementCode] = []
-                                
+                            
+                            # concert the data into a dict and make sure all values as formated as strings
                             old = dict(sh_row)
                             for k, v in sh_row.items():
                                 old[k] = str_value(v)
-                                
+
+                            # add data to te=he indicators   
                             indicators[sh_row.dataElementCode].append(old)
                             
     
             print(f"Indicator keys {len(indicators.keys())} : {indicators.keys()}")
+            # convert each indicator to a match the dhis2 upload json format
             for k, v in indicators.items():
-                # tracked_indicator = data_elems.filter(name__icontains=str(k)).first()
+                # find the data element in dhis matching the indicator
                 tracked_indicator = data_elems.filter(dhis_id=str(k)).first()
                 if len(v) > 0 and tracked_indicator:
-                    print(f"\n\nIndicator {k} : All Possible mappings fr all time periods --> {len(v)}")
+                    print(f"\n\nIndicator {k} : All Possible mappings for all time periods --> {len(v)}")
                     for ou in org_units_names:
                         for tp in unique_time_periods:
                             # filter those that belong to this org unit and time period
@@ -267,39 +286,41 @@ def upload_file(request):
                                 )
                             )
                             if len(filtrate) == 0:
-                                print(f"**{tp} Mappings for [{ou}] --> {len(filtrate)}:  {filtrate} ")
+                                print(f"**{tp} No Mappings for [{ou}] --> {len(filtrate)}:  {filtrate} ")
                                 continue
-
-                            # print(f"**{tp} Mappings for [{ou}] --> {len(filtrate)}:  {filtrate} ")
-
+                            
+                            # get the org unit
                             org_unit = org_units.filter(name__iexact=ou).first()
                             
+                            # Track each identifed match for debugging purposes : Not required
                             if k not in x_info:
                                 x_info[k] = {} 
                             if ou not in x_info[k]:
                                 x_info[k][ou] = {}
                                 
                             x_info[k][ou]["possibles"] = filtrate
-                            for _maybe in filtrate:
-                                x_info[k][ou]["selected"] = _maybe
+                            for _item in filtrate:
+                                x_info[k][ou]["selected"] = _item
 
-                                _val = str_value(_maybe["Value"])
+                                _val = str_value(_item["Value"])
                                 if _val not in [None, np.nan, '', ' ', '0.0']:
                                     _d = {
                                         "dataSet":  "nQfEgvAxT3h", # tracked_indicator.dataset.dhis_id,
                                         "completeDate": "",
                                         "dataElement": tracked_indicator.dhis_id,
-                                        "period": str_value(_maybe["TimePeriod"]),
+                                        "period": str_value(_item["TimePeriod"]),
                                         "orgUnit": org_unit.dhis_id,
                                         "value": _val,
                                         "comment": ""
                                     }
-                                    if "categoryOptionCombo" in _maybe and _maybe["categoryOptionCombo"]:
-                                        _d["categoryOptionCombo"] = _maybe["categoryOptionCombo"]
+                                    # if dataset has a combo key they add combo
+                                    if "categoryOptionCombo" in _item and _item["categoryOptionCombo"]:
+                                        _d["categoryOptionCombo"] = _item["categoryOptionCombo"]
                                     
+                                    # build the dhis2 upload payload
                                     datums["dataValues"].append(_d)
 
-
+        # upload to dhis 2
         ld = len(datums['dataValues'])
         print(f"Datums: {ld} : {datums}")
         if ld <= 0:
