@@ -9,9 +9,6 @@ from .resource import DHISAPI
 from .models import (
     OrganisatinalUnit, DataSet, DataElement, OptionSet, OptionSetOption
 )
-import sklearn
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import cosine_similarity
 
 
 def str_value(v):
@@ -96,6 +93,8 @@ def update_metadata(request):
             payloads = api.fetch(url)
             for _payload in payloads:
                 data = _payload.get(settings.DATA_SET_ELEMENTS, None)
+                if not data:
+                    continue
                 for item in data:
                     for k, v in item.items():
                         assert k == settings.DATA_ELEMENT
@@ -206,15 +205,17 @@ def upload_file(request):
                     _all.append(False)
             if all(_all):
                 for _, row in df.iterrows():
-                    datums["dataValues"].append({
-                        "dataSet": str_value(row["DataSet"]),
-                        "completeDate": "",
-                        "dataElement": str_value(row["DataElement"]),
-                        "period": str_value(row["Period"]),
-                        "orgUnit": str_value(row["OrgUnit"]),
-                        "value": str_value(row["Value"]),
-                        "comment": str_value(row["Comment"])
-                    })
+                    _val = str_value(row["Value"])
+                    if _val not in [None, np.nan, '', ' ', '0.0']:
+                        datums["dataValues"].append({
+                            "dataSet": str_value(row["DataSet"]),
+                            "completeDate": "",
+                            "dataElement": str_value(row["DataElement"]),
+                            "period": str_value(row["Period"]),
+                            "orgUnit": str_value(row["OrgUnit"]),
+                            "value": _val,
+                            "comment": str_value(row["Comment"])
+                        })
                 
         elif file_type in ["xlsx", "xls"]:
             
@@ -231,52 +232,29 @@ def upload_file(request):
                 for tp in sheet_goal['TimePeriod'].unique():
                     if tp not in unique_time_periods:
                         unique_time_periods.append(tp)
-                
+
+                print(f"Periods in dataset: {unique_time_periods}")
+
                 sheet_goal = sheet_goal.sort_values(by=['GeoAreaName', 'TimePeriod'], ascending=False)
                 for _, sh_row in sheet_goal.iterrows():
                     # if sh_row.GeoAreaName.lower().strip() in org_units_names and sh_row.TimePeriod == 2022:
                     if sh_row.GeoAreaName.lower().strip() in org_units_names:
-                        exists = list(filter(lambda de: str(sh_row.Indicator).strip() in de.name, data_elems))
+                        exists = list(filter(lambda de: str(sh_row.dataElementCode).strip() in de.dhis_id, data_elems))
                         if exists:
-                            if sh_row.Indicator not in indicators:
-                                indicators[sh_row.Indicator] = []
+                            if sh_row.dataElementCode not in indicators:
+                                indicators[sh_row.dataElementCode] = []
                                 
                             old = dict(sh_row)
                             for k, v in sh_row.items():
                                 old[k] = str_value(v)
                                 
-                            indicators[sh_row.Indicator].append(old)
+                            indicators[sh_row.dataElementCode].append(old)
                             
-            # for k, v in indicators.items():
-            #     delem = data_elems.filter(name__icontains=str(k)).first()
-            #     if len(v) > 0:
-            #         print(f"{k} : {len(v)}")
-            #         for ou in org_units_names:
-            #             selected = list(filter(lambda x: x["GeoAreaName"].lower().strip() == ou, v))
-            #             _xsel = [_x['SeriesDescription'] for _x in selected]
-            #             _xsel.insert(0, delem.name)
-            #             if len(selected) > 0:
-            #                 print(f"{ou} : {len(selected)}")
-            #                 vectorizer = TfidfVectorizer()
-            #                 vectors = vectorizer.fit_transform(_xsel)
-            #                 similarity = cosine_similarity(vectors[0], vectors[1:])
-            #                 most_similar_index = similarity.argmax()
-            #                 perc = similarity[0, most_similar_index]
-                            
-            #                 _xsel = _xsel[1:]
-            #                 desc = _xsel[most_similar_index]
-            #                 print("--------------------------------------------")
-            #                 print("--------------------------------------------")
-            #                 print(delem.name)
-            #                 print(f"Best - {perc} - {desc}")
-            #                 print("--------------------------------------------")
-            #                 for index, _xs in enumerate(_xsel):
-            #                    print(f"{similarity[0, index]} : {_xs}") 
-            #                 print("\n")
-                 
-            print(f"Indicator keys {len(indicators.keys())}")
+    
+            print(f"Indicator keys {len(indicators.keys())} : {indicators.keys()}")
             for k, v in indicators.items():
-                tracked_indicator = data_elems.filter(name__icontains=str(k)).first()
+                # tracked_indicator = data_elems.filter(name__icontains=str(k)).first()
+                tracked_indicator = data_elems.filter(dhis_id=str(k)).first()
                 if len(v) > 0 and tracked_indicator:
                     print(f"\n\nIndicator {k} : All Possible mappings fr all time periods --> {len(v)}")
                     for ou in org_units_names:
@@ -288,30 +266,42 @@ def upload_file(request):
                                     v
                                 )
                             )
-                            if len(filtrate) > 0: 
-                                org_unit = org_units.filter(name__iexact=ou).first()
-                                print(f"**{tp} Mappings for [{ou}] --> {len(filtrate)}  --> picking first ")
+                            if len(filtrate) == 0:
+                                print(f"**{tp} Mappings for [{ou}] --> {len(filtrate)}:  {filtrate} ")
+                                continue
+
+                            # print(f"**{tp} Mappings for [{ou}] --> {len(filtrate)}:  {filtrate} ")
+
+                            org_unit = org_units.filter(name__iexact=ou).first()
+                            
+                            if k not in x_info:
+                                x_info[k] = {} 
+                            if ou not in x_info[k]:
+                                x_info[k][ou] = {}
                                 
-                                if k not in x_info:
-                                    x_info[k] = {} 
-                                if ou not in x_info[k]:
-                                    x_info[k][ou] = {}
-                                    
-                                x_info[k][ou]["possibles"] = filtrate
-                                _maybe = filtrate[0]
+                            x_info[k][ou]["possibles"] = filtrate
+                            for _maybe in filtrate:
                                 x_info[k][ou]["selected"] = _maybe
-                                
-                                datums["dataValues"].append({
-                                    "dataSet": tracked_indicator.dataset.dhis_id,
-                                    "completeDate": "",
-                                    "dataElement": tracked_indicator.dhis_id,
-                                    "period": str_value(_maybe["TimePeriod"]),
-                                    "orgUnit": org_unit.dhis_id,
-                                    "value": str_value(_maybe["Value"]),
-                                    "comment": ""
-                                })
+
+                                _val = str_value(_maybe["Value"])
+                                if _val not in [None, np.nan, '', ' ', '0.0']:
+                                    _d = {
+                                        "dataSet":  "nQfEgvAxT3h", # tracked_indicator.dataset.dhis_id,
+                                        "completeDate": "",
+                                        "dataElement": tracked_indicator.dhis_id,
+                                        "period": str_value(_maybe["TimePeriod"]),
+                                        "orgUnit": org_unit.dhis_id,
+                                        "value": _val,
+                                        "comment": ""
+                                    }
+                                    if "categoryOptionCombo" in _maybe and _maybe["categoryOptionCombo"]:
+                                        _d["categoryOptionCombo"] = _maybe["categoryOptionCombo"]
+                                    
+                                    datums["dataValues"].append(_d)
+
+
         ld = len(datums['dataValues'])
-        print(f"Datums: {ld}")
+        print(f"Datums: {ld} : {datums}")
         if ld <= 0:
             payload = {
                 "success": False,
@@ -331,6 +321,7 @@ def upload_file(request):
                 }
             
     print(url)
+    print(payload)
                           
     return JsonResponse({
         **payload,

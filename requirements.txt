@@ -2,4 +2,5 @@ python-dotenv==1.0.0
 Django==4.2.7
 openpyxl==3.1.2
 pandas
+requests
 
